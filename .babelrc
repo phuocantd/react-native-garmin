@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    ["module:react-native-dotenv"],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "components": "./src/components",
+          "utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

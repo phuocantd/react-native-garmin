@@ -10,8 +10,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "crypto-js": "^4.1.1",
+    "oauth-1.0a": "phuocantd/oauth-1.0a",
+    "querystring": "^0.2.1",
     "react": "17.0.2",
-    "react-native": "0.66.3"
+    "react-native": "0.66.3",
+    "react-native-dotenv": "^3.3.0",
+    "react-native-modal": "^13.0.0",
+    "react-native-webview": "^11.14.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
