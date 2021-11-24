@@ -7,7 +7,9 @@
         "root": ["./"],
         "alias": {
           "components": "./src/components",
-          "utils": "./src/utils"
+          "utils": "./src/utils",
+          "hooks": "./src/hooks",
+          "configs": "./src/configs"
         }
       }
     ]
