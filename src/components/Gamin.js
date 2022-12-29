@@ -3,12 +3,14 @@ import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import {WebView} from 'react-native-webview';
 import querystring from 'querystring';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {OAUTH_ROOT, GARMIN} from 'configs/api';
 import {useConnectGarmin} from 'hooks/garmin';
 import Loading from './Loading';
 
 const Gamin = ({handleSuccess}) => {
+  const {bottom} = useSafeAreaInsets();
   const [visible, setVisible] = useState(false);
 
   const {
@@ -97,6 +99,7 @@ const Gamin = ({handleSuccess}) => {
             onNavigationStateChange={onNavigationStateChange}
             startInLoadingState
             renderLoading={() => <Loading show={true} />}
+            injectedJavaScript={injectScript(bottom)}
           />
         </View>
       </Modal>
@@ -134,5 +137,11 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc',
   },
 });
+
+const injectScript = bottom => `
+  const style = document.createElement('style');
+  style.innerHTML = 'body { padding-bottom: ${bottom}px }'
+  document.head.appendChild(style);
+`;
 
 export default Gamin;
