@@ -1,5 +1,5 @@
 # react-native-garmin
-
+auth: phuocantd
 A sample connect Garmin oauth in react native
 
 ## Install
