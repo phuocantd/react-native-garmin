@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^1.6.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "crypto-js": "^4.1.1",
     "oauth-1.0a": "phuocantd/oauth-1.0a",
